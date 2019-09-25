@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language = "javascript">
+            var header = "Enter the details";
+            var jObj = {
+            };
+            document.getElementById("head1").innerHTML = header.fontcolor("violet")
+            function Submit(){
+                jObj["Name"] = document.getElementById("Name").value;
+                jObj["age"] = document.getElementById("age").value;
+                jObj["height"] = document.getElementById("height").value;
+            }
+            var x = "";
+            
+        </script>
+    </head>
+    <body>
+        <h2 id = "head1" style = "text-align: center"></h2>
+        <form style = "text-align: center">
+            Enter Name : <input type="text" id="Name"/><br>
+            Enter Age : <input type = "number" id = "age"/><br>
+            Enter Height : <input type = "number" id = "height"/><br>
+            <input type="button" onClick="Submit()" Value="Submit"/>
+        </form>
+        <p id = "Assign" style = "text-align: center"></p>
+    </body>
+</html>

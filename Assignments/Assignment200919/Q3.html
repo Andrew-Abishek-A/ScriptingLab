@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h2 style = "text-align: center">To display the colour names and their respective numerical values</h2>
+        <p id = "Assignment" style = "text-align: center"></p>
+        <script language = "javascript">
+            var str = "The color is displayed";
+            var x = "";
+            var colourObj = {
+                "names" : ["Black", "White", "Red", "Green", "Blue"],
+                "values": ["#000000", "#FFFFFF", "#FF0000", "#00FF00", "#0000FF"]
+            };
+            x += "<br>The colour:&nbsp&nbsp&nbsp&nbspThe integer value:&nbsp&nbsp&nbsp&nbspThe displayed colour:<br>"
+            for (i in colourObj.names){
+                x += colourObj.names[i] + "&nbsp&nbsp&nbsp&nbsp" + colourObj.values[i] + "&nbsp&nbsp&nbsp&nbsp" + str.fontcolor(colourObj.names[i]) + "<br>";
+            }
+            document.getElementById("Assignment").innerHTML = x;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,3 @@
+Hello
+I'm running this program in scripting lab class
+this programming lab is fun

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <title>Assignment3.html</title>
+    <head>
+        <p>
+            Create a webpage that stores the details of patients as json objects.
+            The name and doctor of the patient is storedas a name value pair.
+            The diseases the patient suffers from is stored in an array.
+            Display the webpage with atleast 2 patient details
+        </p>
+    </head>
+    <body>
+        <p>Patient Deatils are mentioned below:</p>
+        <p id = "Patient"></p>
+        <script language = "javascript">
+            var i, x = "";
+            var patient1 = {
+                "name" : "John",
+                "Doctor" : "Daniel",
+                "Diseases" : [
+                    "Fever",
+                    "Malaria"
+                ]
+            };
+            x += "<h3>Patient1:</h3>";
+            x += "<br>";
+            x += "Name: " + patient1.name;
+            x += "<br>";
+            x += "Doctor: " + patient1.Doctor;
+            x += "<br>";
+            x += "Diseases:<br>";
+            for (i in patient1.Diseases) {
+                x += "&nbsp;" + patient1.Diseases[i] + "<br>";
+            }
+            var patient2 = {
+                "name" : "Jack",
+                "Doctor" : "Wilkins",
+                "Diseases" : [
+                    "Dengue",
+                    "Headache"
+                ]
+            };
+            x += "<h3>Patient2:</h3>";
+            x += "<br>";
+            x += "Name: " + patient2.name;
+            x += "<br>";
+            x += "Doctor: " + patient2.Doctor;
+            x += "<br>";
+            x += "Diseases:<br>";
+            for (i in patient2.Diseases) {
+                x += "&nbsp;" + patient2.Diseases[i] + "<br>";
+            }
+            document.getElementById("Patient").innerHTML = x;
+        </script>
+    </body>
+</html>

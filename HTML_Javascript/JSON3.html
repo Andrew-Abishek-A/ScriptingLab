@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <title>JSON3.html</title>
+    <body>
+        <h1>Looping through arrays inside arrays</h1>
+        <p id = "Demo"></p>
+        <script language = "javascript">
+            var myObj, i, j, x = "";
+            myObj = {
+                "name" : "John",
+                "age" : 30,
+                "cars" : [
+                    {"name" : "Ford", "models" : ["Feista", "Focus", "Mustang"]},
+                    {"name" : "BMW", "models" : ["320", "X3", "X5"]},
+                    {"name" : "Fiat", "models" : ["500", "Panda"]}
+                ]
+            }
+            for (i in myObj.cars) {
+                x += "<h2>" + myObj.cars[i].name + "</h2>";
+                for (j in myObj.cars[i].models) {
+                    x += myObj.cars[i].models[j] + "<br>"
+                }
+            }
+            document.getElementById("Demo").innerHTML = x;
+        </script>
+    </body>
+</html>
